@@ -4,6 +4,10 @@
 #include "Eigen/Dense"
 
 class Tools {
+
+private:
+	Eigen::MatrixXd Hj_previous_;
+
 public:
   /**
   * Constructor.
