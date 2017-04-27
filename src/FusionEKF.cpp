@@ -82,9 +82,9 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 		ekf_.x_ << px, py, 1, 1;
 
 		// Initialize the state covariance matrix
-		ekf_.P_ << 1, 0, 0, 0;
-		0, 1, 0, 0;
-		0, 0, 1000, 0;
+		ekf_.P_ << 1, 0, 0, 0,
+		0, 1, 0, 0,
+		0, 0, 1000, 0,
 		0, 0, 0, 1000;
 
 		// Set the previous time stamp to time stamp of first measurement
@@ -99,9 +99,9 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 		ekf_.x_ << px, py, 1, 1;
 
 		// Initialize the state covariance matrix
-		ekf_.P_ << 1, 0, 0, 0;
-		0, 1, 0, 0;
-		0, 0, 1000, 0;
+		ekf_.P_ << 1, 0, 0, 0,
+		0, 1, 0, 0,
+		0, 0, 1000, 0,
 		0, 0, 0, 1000;
 
 		// Set the previous time stamp to time stamp of first measurement
