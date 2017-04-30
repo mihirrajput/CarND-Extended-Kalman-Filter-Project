@@ -153,7 +153,11 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 	  dt_3 / 2 * noise_ax, 0, dt_2*noise_ax, 0,
 	  0, dt_3 / 2 * noise_ay, 0, dt_2*noise_ay;
 
-  ekf_.Predict();
+  // to handle arithmatic instability when 2 measurements are really close
+  if (dt>0.0001){
+	  ekf_.Predict();
+  }
+  
 
   /*****************************************************************************
    *  Update
