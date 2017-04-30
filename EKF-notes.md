@@ -21,6 +21,7 @@ We can initialize state covariance as shown below. 'R_radar_(0,0)+R_radar_(1,1)'
 The individual terms of the Jacobian matrix for **this** specific problem have denominator as a power of px*px + py*py. If absolute value of px*px + py*py is close to zero, I simple use the previous 'good Jacobian'. I had learnt about a similar technique called **'Dishonest' Newton Raphson** for Power Flow analysis where the Jacobian is computed occasionally or in extreme cases only once.
 
 # Visualization:
+LIDAR gives us good resolution. From EKF-LIDAR image we can see that we have a pretty good idea about the position of the object but no idea about velocity. This is where RADAR comes in. Despite the errors in measurement we do get some sense of velocity and position. Combining both RADAR and LIDAR measurements as shown in EKF-RADAR-LIDAR image we can get a good RMSE value for our estimated state vs ground reality.
 ![EKF-LIDAR](https://github.com/mihirrajput/CarND-Extended-Kalman-Filter-Project/blob/master/EKF-LIDAR.png)
 ![EKF-RADAR](https://github.com/mihirrajput/CarND-Extended-Kalman-Filter-Project/blob/master/EKF-RADAR.png)
 ![EKF-RADAR-LIDAR](https://github.com/mihirrajput/CarND-Extended-Kalman-Filter-Project/blob/master/EKF-RADAR-LIDAR.jpg)
