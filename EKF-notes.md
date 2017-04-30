@@ -20,5 +20,7 @@ We can initialize state covariance as shown below. 'R_radar_(0,0)+R_radar_(1,1)'
 # Handling division by 0 in Jacobian:
 The individual terms of the Jacobian matrix for **this** specific problem have denominator as a power of px*px + py*py. If absolute value of px*px + py*py is close to zero, I simple use the previous 'good Jacobian'. I had learnt about a similar technique called **'Dishonest' Newton Raphson** for Power Flow analysis where the Jacobian is computed occasionally or in extreme cases only once.
 
-![EKF-LIDAR]
-(https://github.com/mihirrajput/CarND-Extended-Kalman-Filter-Project/blob/master/EKF-LIDAR.png)
+# Visualization:
+![EKF-LIDAR](https://github.com/mihirrajput/CarND-Extended-Kalman-Filter-Project/blob/master/EKF-LIDAR.png)
+![EKF-RADAR](https://github.com/mihirrajput/CarND-Extended-Kalman-Filter-Project/blob/master/EKF-RADAR.png)
+![EKF-RADAR-LIDAR](https://github.com/mihirrajput/CarND-Extended-Kalman-Filter-Project/blob/master/EKF-RADAR-LIDAR.jpg)
